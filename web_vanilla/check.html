@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="title">Check</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body style="width:800px">
+        <h2 id="heading">Check</h2>
+        <p>
+            <a href="https://kind-brahmagupta-4f9a45.netlify.com/"><< Back to Assets</a>
+        </p>
+		<p id="message" style="color:white"></p>
+
+        <pre id="result">Checking...</pre>
+
+        <script>
+            var url_string = window.location.href; //window.location.href
+            var url = new URL(url_string);
+            var assetId = url.searchParams.get("assetID");
+
+            document.getElementById('title').innerHTML = "Check Asset id: " + assetId;
+            document.getElementById('heading').innerHTML = "Check Asset id: " + assetId;
+
+            var address = 'https://ue-server.glitch.me/check/' + assetId;
+
+            fetch(address)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerHTML = JSON.stringify(data, undefined, 2);
+                
+				if (data.match == true) {
+					document.getElementById('message').innerHTML = "The hashes match - Trakka data is verified";
+                    document.getElementById('message').style.backgroundColor = "green";
+				} else if (data.match == false) {
+					document.getElementById('message').innerHTML = "The hashes do not match - Trakka data cannot be accounted for";
+                    document.getElementById('message').style.backgroundColor = "red";
+				}
+            })
+            .catch(function(err) {
+                console.error('An error ocurred', err);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "batch",
+  "version": "1.0.0",
+  "description": "Batch program to create blocks in fabric per entries in the custom database",
+  "main": "batch.js",
+  "scripts": {
+    "start": "node batch.js",
+    "build": "npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  },
+  "author": "UE",
+  "license": "ISC"
+}

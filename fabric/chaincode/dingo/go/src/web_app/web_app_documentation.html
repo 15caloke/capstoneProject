@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://localhost:6060/pkg/web_app/?m=all -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>web_app - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="./web_app_documentation_files/style.css">
+
+<link rel="stylesheet" href="./web_app_documentation_files/jquery.treeview.css">
+<script>window.initFuncs = [];</script>
+<script src="./web_app_documentation_files/jquery.js" defer=""></script>
+<script src="./web_app_documentation_files/jquery.treeview.js" defer=""></script>
+<script src="./web_app_documentation_files/jquery.treeview.edit.js" defer=""></script>
+
+
+<script>var goVersion = "go1.11.1";</script>
+<script src="./web_app_documentation_files/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/">Go</a></div>
+<a href="http://localhost:6060/pkg/web_app/?m=all#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu" style="min-width: 60px;">
+<a href="http://localhost:6060/doc/">Documents</a>
+<a href="http://localhost:6060/pkg/">Packages</a>
+<a href="http://localhost:6060/project/">The Project</a>
+<a href="http://localhost:6060/help/">Help</a>
+
+<a href="http://localhost:6060/blog/">Blog</a>
+
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide" tabindex="-1" style="outline: 0px;">
+<div class="container">
+
+
+  <h1>
+    Package web_app
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type="text/javascript">
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "web_app"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="http://localhost:6060/pkg/web_app/?m=all#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="http://localhost:6060/pkg/web_app/?m=all#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Created By Calum Oke,
+Last Updated 29/10/18 By Calum Oke
+</p>
+<p>
+The web application package is designed to emulate the REST API side that
+clients would navigate to the endpoints and perform some chaincode function
+that interact with the ledger
+</p>
+<p>
+Unfortunately due to time constraints, the web app only performs functions
+defined in this package. In any case, when a user sends a GET request to an endpoint,
+it would utilise the "peer chaincode query" command, otherwise any other modification
+of data would be ran under the "peer chaincode invoke" command
+</p>
+<p>
+To see chaincode posting to a server through the CLI container under the invokable function,
+"exportData," visit: <a href="http://fab-priv-srv.glitch.me/hashes">http://fab-priv-srv.glitch.me/hashes</a>
+</p>
+<p>
+This web application is hosted on DigitalOcean at:
+<a href="http://206.189.24.238/">http://206.189.24.238</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#getAllAssets">func getAllAssets(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#getAllComps">func getAllComps(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#getAllHashes">func getAllHashes(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#getAllObs">func getAllObs(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#getAsset">func getAsset(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#getComp">func getComp(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#getHash">func getHash(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#getObs">func getObs(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#indexPage">func indexPage(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#main">func main()</a></dd>
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#postReadyData">func postReadyData(w http.ResponseWriter, r *http.Request)</a></dd>
+			
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#Asset">type Asset</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/web_app/?m=all#getLinkAssets">func getLinkAssets() []Asset</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#Assets">type Assets</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#Component">type Component</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/web_app/?m=all#getLinkComponents">func getLinkComponents() []Component</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#Components">type Components</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#Hash">type Hash</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/web_app/?m=all#getLinkHashes">func getLinkHashes() []Hash</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#Hashes">type Hashes</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#Observation">type Observation</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/web_app/?m=all#getLinkObservations">func getLinkObservations() []Observation</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/web_app/?m=all#Observations">type Observations</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/web_app/web_app.go">web_app.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls—perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants <a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#pkg-constants">¶</a></h2>
+			
+				<p>
+URL endpoints and other constants
+</p>
+
+				<pre>const (
+    <span id="ASSET_URL">ASSET_URL</span>        = "http://mock-trakka.glitch.me/assets"
+    <span id="COMPONENTS_URL">COMPONENTS_URL</span>   = "http://mock-trakka.glitch.me/components"
+    <span id="OBSERVATIONS_URL">OBSERVATIONS_URL</span> = "http://mock-trakka.glitch.me/observations"
+    <span id="HASHES_URL">HASHES_URL</span>       = "http://cust-db.glitch.me/readyhashes"
+    <span id="PORT">PORT</span>             = ":8082"
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="getAllAssets">func <a href="http://localhost:6060/src/web_app/web_app.go?s=6795:6852#L207">getAllAssets</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getAllAssets">¶</a>
+				
+				
+			</h2>
+			<pre>func getAllAssets(w <a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Displays all Asset objects
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="getAllComps">func <a href="http://localhost:6060/src/web_app/web_app.go?s=7863:7919#L242">getAllComps</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getAllComps">¶</a>
+				
+				
+			</h2>
+			<pre>func getAllComps(w <a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Displays all Component objects
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="getAllHashes">func <a href="http://localhost:6060/src/web_app/web_app.go?s=8725:8782#L269">getAllHashes</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getAllHashes">¶</a>
+				
+				
+			</h2>
+			<pre>func getAllHashes(w <a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Displays all Hash objects
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="getAllObs">func <a href="http://localhost:6060/src/web_app/web_app.go?s=8077:8131#L249">getAllObs</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getAllObs">¶</a>
+				
+				
+			</h2>
+			<pre>func getAllObs(w <a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Displays all Observation objects
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="getAsset">func <a href="http://localhost:6060/src/web_app/web_app.go?s=7039:7092#L214">getAsset</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getAsset">¶</a>
+				
+				
+			</h2>
+			<pre>func getAsset(w <a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Displays single Asset object according to the inputted Asset ID
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="getComp">func <a href="http://localhost:6060/src/web_app/web_app.go?s=7465:7517#L228">getComp</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getComp">¶</a>
+				
+				
+			</h2>
+			<pre>func getComp(w <a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Displays single Component object according to the inputted Component ID
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="getHash">func <a href="http://localhost:6060/src/web_app/web_app.go?s=8967:9019#L276">getHash</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getHash">¶</a>
+				
+				
+			</h2>
+			<pre>func getHash(w <a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Displays single Hash object according to the inputted Hash ID
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="getObs">func <a href="http://localhost:6060/src/web_app/web_app.go?s=8329:8380#L255">getObs</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getObs">¶</a>
+				
+				
+			</h2>
+			<pre>func getObs(w <a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Displays single Observation object according to the inputted Observation ID
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="indexPage">func <a href="http://localhost:6060/src/web_app/web_app.go?s=6187:6241#L188">indexPage</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#indexPage">¶</a>
+				
+				
+			</h2>
+			<pre>func indexPage(w <a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Prompt user with each REST endpoint URL
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="main">func <a href="http://localhost:6060/src/web_app/web_app.go?s=9795:9806#L300">main</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#main">¶</a>
+				
+				
+			</h2>
+			<pre>func main()</pre>
+			<p>
+Creates Router and routes, host server on the port specified in the constants
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="postReadyData">func <a href="http://localhost:6060/src/web_app/web_app.go?s=9503:9561#L292">postReadyData</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#postReadyData">¶</a>
+				
+				
+			</h2>
+			<pre>func postReadyData(w <a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>)</pre>
+			<p>
+Creates new Asset object and updates the assets endpoint with new Asset object
+- This was tested to work via Postman request. No actual way for the client
+to post via UI
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Asset">type <a href="http://localhost:6060/src/web_app/web_app.go?s=1524:2041#L31">Asset</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#Asset">¶</a>
+				
+				
+			</h2>
+			<p>
+Defining Asset Model
+</p>
+
+			<pre>type Asset struct {
+<span id="Asset.ID"></span>    ID                     <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"_id"` <span class="comment">// MongoDB property</span>
+<span id="Asset.SerialNumber"></span>    SerialNumber           <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"SerialNumber"`
+<span id="Asset.OperatingEnvironmentID"></span>    OperatingEnvironmentID <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"OperatingEnvironmentID"`
+<span id="Asset.LocationID"></span>    LocationID             <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"LocationID"`
+<span id="Asset.AssetModelID"></span>    AssetModelID           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"AssetModelID"`
+<span id="Asset.AssetID"></span>    AssetID                <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"AssetID"`
+<span id="Asset.Asset"></span>    Asset                  <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"Asset"`
+<span id="Asset.DateInService"></span>    DateInService          <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"DateInService"`
+<span id="Asset.V"></span>    V                      <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"__v"` <span class="comment">// MongoDB property</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="getLinkAssets">func <a href="http://localhost:6060/src/web_app/web_app.go?s=4339:4367#L103">getLinkAssets</a>
+					<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getLinkAssets">¶</a>
+					
+					
+				</h3>
+				<pre>func getLinkAssets() []<a href="http://localhost:6060/pkg/web_app/?m=all#Asset">Asset</a></pre>
+				<p>
+Retrieves all Asset objects from the external API endpoint
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Assets">type <a href="http://localhost:6060/src/web_app/web_app.go?s=3749:3763#L85">Assets</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#Assets">¶</a>
+				
+				
+			</h2>
+			<p>
+Defining Collection of Objects
+</p>
+
+			<pre>type Assets []<a href="http://localhost:6060/pkg/web_app/?m=all#Asset">Asset</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Component">type <a href="http://localhost:6060/src/web_app/web_app.go?s=2071:2596#L44">Component</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#Component">¶</a>
+				
+				
+			</h2>
+			<p>
+Defining Component Model
+</p>
+
+			<pre>type Component struct {
+<span id="Component.ID"></span>    ID                 <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"_id"` <span class="comment">// MongoDB property</span>
+<span id="Component.SerialNumber"></span>    SerialNumber       <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"SerialNumber"`
+<span id="Component.DefaultLabFormatID"></span>    DefaultLabFormatID <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"DefaultLabFormatID"`
+<span id="Component.ComponentName"></span>    ComponentName      <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"ComponentName"`
+<span id="Component.ComponentModelID"></span>    ComponentModelID   <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ComponentModelID"`
+<span id="Component.ComponentID"></span>    ComponentID        <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ComponentID"`
+<span id="Component.Component"></span>    Component          <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"Component"`
+<span id="Component.AssetID"></span>    AssetID            <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"AssetID"` <span class="comment">// Relates to AssetID in Asset</span>
+<span id="Component.V"></span>    V                  <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"__v"`     <span class="comment">// MongoDB property</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="getLinkComponents">func <a href="http://localhost:6060/src/web_app/web_app.go?s=4782:4818#L126">getLinkComponents</a>
+					<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getLinkComponents">¶</a>
+					
+					
+				</h3>
+				<pre>func getLinkComponents() []<a href="http://localhost:6060/pkg/web_app/?m=all#Component">Component</a></pre>
+				<p>
+Retrieves all Component objects from the external API endpoint
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Components">type <a href="http://localhost:6060/src/web_app/web_app.go?s=3765:3787#L86">Components</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#Components">¶</a>
+				
+				
+			</h2>
+			<p>
+Defining Collection of Objects
+</p>
+
+			<pre>type Components []<a href="http://localhost:6060/pkg/web_app/?m=all#Component">Component</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Hash">type <a href="http://localhost:6060/src/web_app/web_app.go?s=3467:3705#L75">Hash</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#Hash">¶</a>
+				
+				
+			</h2>
+			<p>
+Defining Hash Model
+</p>
+
+			<pre>type Hash struct {
+<span id="Hash.ID"></span>    ID          <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"_id"` <span class="comment">// MongoDB property</span>
+<span id="Hash.ReadyHashID"></span>    ReadyHashID <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ReadyHashID"`
+<span id="Hash.AssetID"></span>    AssetID     <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"AssetID"`
+<span id="Hash.Hash"></span>    Hash        <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"Hash"`
+<span id="Hash.V"></span>    V           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"__v"` <span class="comment">// MongoDB property</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="getLinkHashes">func <a href="http://localhost:6060/src/web_app/web_app.go?s=5690:5717#L166">getLinkHashes</a>
+					<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getLinkHashes">¶</a>
+					
+					
+				</h3>
+				<pre>func getLinkHashes() []<a href="http://localhost:6060/pkg/web_app/?m=all#Hash">Hash</a></pre>
+				<p>
+Retrieves all Hash objects from the external API endpoint
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Hashes">type <a href="http://localhost:6060/src/web_app/web_app.go?s=3817:3830#L88">Hashes</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#Hashes">¶</a>
+				
+				
+			</h2>
+			<p>
+Defining Collection of Objects
+</p>
+
+			<pre>type Hashes []<a href="http://localhost:6060/pkg/web_app/?m=all#Hash">Hash</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Observation">type <a href="http://localhost:6060/src/web_app/web_app.go?s=2628:3442#L57">Observation</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#Observation">¶</a>
+				
+				
+			</h2>
+			<p>
+Defining Observation Model
+</p>
+
+			<pre>type Observation struct {
+<span id="Observation.ID"></span>    ID                     <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"_id"` <span class="comment">// MongoDB property</span>
+<span id="Observation.UpdateUserID"></span>    UpdateUserID           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"UpdateUserID"`
+<span id="Observation.SiteID"></span>    SiteID                 <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"SiteID"`
+<span id="Observation.MeterEventID"></span>    MeterEventID           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"MeterEventID"`
+<span id="Observation.DataSourceID"></span>    DataSourceID           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"DataSourceID"`
+<span id="Observation.TrakkaExceptionLevelID"></span>    TrakkaExceptionLevelID <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"TrakkaExceptionLevelID"`
+<span id="Observation.ObservationExceptionID"></span>    ObservationExceptionID <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ObservationExceptionID"`
+<span id="Observation.ImportID"></span>    ImportID               <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ImportID"`
+<span id="Observation.ObservationCode"></span>    ObservationCode        <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"ObservationCode"`
+<span id="Observation.MeterReading"></span>    MeterReading           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"MeterReading"`
+<span id="Observation.ConnectionCodeID"></span>    ConnectionCodeID       <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ConnectionCodeID"`
+<span id="Observation.ObservationTypeID"></span>    ObservationTypeID      <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ObservationTypeID"`
+<span id="Observation.ObservationID"></span>    ObservationID          <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ObservationID"`
+<span id="Observation.V"></span>    V                      <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"__v"` <span class="comment">// MongoDB property</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="getLinkObservations">func <a href="http://localhost:6060/src/web_app/web_app.go?s=5239:5279#L146">getLinkObservations</a>
+					<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#getLinkObservations">¶</a>
+					
+					
+				</h3>
+				<pre>func getLinkObservations() []<a href="http://localhost:6060/pkg/web_app/?m=all#Observation">Observation</a></pre>
+				<p>
+Retrieves all Observations objects from the external API endpoint
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Observations">type <a href="http://localhost:6060/src/web_app/web_app.go?s=3789:3815#L87">Observations</a>
+				<a class="permalink" href="http://localhost:6060/pkg/web_app/?m=all#Observations">¶</a>
+				
+				
+			</h2>
+			<p>
+Defining Collection of Objects
+</p>
+
+			<pre>type Observations []<a href="http://localhost:6060/pkg/web_app/?m=all#Observation">Observation</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.11.1.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:6060/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+
+</body></html>

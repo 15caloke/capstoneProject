@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assets</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Assets</h1>
+        <p></p>
+        <div id="main">
+            <button class="collapsible">Open Assets</button>
+            <div class="content">
+                <p id="assets">Example asset content.</p>
+                <div id="comps">
+                    <button class="collapsible">Open Components</button>
+                    <div class="content">
+                        <p id="components">Example content.</p>
+                        <div id="obs">
+                            <button class="collapsible">Open Observations</button>
+                            <div class="content">
+                                <p id="observations">Example content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p></p>
+
+        </div>
+        <p>End of results.</p>
+
+        <script type="text/javascript">
+
+            fetch('http://localhost:3005/geteverything')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById('assets').innerHTML = JSON.stringify(data);
+                console.log(data[0].AssetID);
+
+                var i;
+
+                for (i = 0; i < data.length; i++) {
+                    document.getElementById('main').innerHTML += '<button class="collapsible">' + (i+1) + ' | ' + data[i].assetResult[0].asset[0].AssetID + ' - ' + data[i].assetResult[0].asset[0].Asset + '</button><div class="content"><p id="' + i + '"></p></div>';
+                    document.getElementById(i).innerHTML = '<ul><li>SerialNumber: ' + data[i].SerialNumber + '</li><li>LocationID: ' + data[i].LocationID + '</li><li>AssetModelID: ' + data[i].AssetModelID + '</li><li>OperatingEnvironmentID: ' + data[i].OperatingEnvironmentID + '</li><li>DateInService: ' + data[i].DateInService + '</ul>';
+                }
+
+                var coll = document.getElementsByClassName("collapsible");
+
+                for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight){
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                    /* if (content.style.display == "none") {
+                        content.style.display = "block";
+                    } else {
+                        content.style.display = "none";
+                    } */
+                });
+            }
+            })
+            .catch(err => {
+                console.error('An error ocurred', err);
+            });
+
+        </script>
+
+    </body>
+</html>

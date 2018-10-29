@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://localhost:6060/pkg/fab_dingo/?m=all#queryObjs -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>fab_dingo - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="./chaincode_documentation_files/style.css">
+
+<link rel="stylesheet" href="./chaincode_documentation_files/jquery.treeview.css">
+<script>window.initFuncs = [];</script>
+<script src="./chaincode_documentation_files/jquery.js" defer=""></script>
+<script src="./chaincode_documentation_files/jquery.treeview.js" defer=""></script>
+<script src="./chaincode_documentation_files/jquery.treeview.edit.js" defer=""></script>
+
+
+<script>var goVersion = "go1.11.1";</script>
+<script src="./chaincode_documentation_files/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/">Go</a></div>
+<a href="http://localhost:6060/pkg/fab_dingo/?m=all#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu" style="min-width: 60px;">
+<a href="http://localhost:6060/doc/">Documents</a>
+<a href="http://localhost:6060/pkg/">Packages</a>
+<a href="http://localhost:6060/project/">The Project</a>
+<a href="http://localhost:6060/help/">Help</a>
+
+<a href="http://localhost:6060/blog/">Blog</a>
+
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide" tabindex="-1" style="outline: 0px;">
+<div class="container">
+
+
+  <h1>
+    Package fab_dingo
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type="text/javascript">
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "fab_dingo"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Created by Calum Oke with input from Unhandled Exceptions
+Last Updated on the 26th October 2018 by Calum Oke
+</p>
+<p>
+package fab_dingo utilises the fabric-shim API release 1.2 to provide
+Smart contracting to Dingo's Asset Provenance for authenticity and
+data integrity
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#queryObjs">func queryObjs(APIstub shim.ChaincodeStubInterface, startKey string, endKey string) []byte</a></dd>
+			
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#Asset">type Asset</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#getLinkAssets">func getLinkAssets() []Asset</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#Assets">type Assets</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#Component">type Component</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#getLinkComponents">func getLinkComponents() []Component</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#Components">type Components</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#Hash">type Hash</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#HashFab">type HashFab</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#Hashes">type Hashes</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#getLinkHashes">func getLinkHashes() Hashes</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#Observation">type Observation</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#getLinkObservations">func getLinkObservations() []Observation</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#Observations">type Observations</a></dd>
+				
+				
+			
+				
+				<dd><a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">type SmartContract</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.Init">func (s *SmartContract) Init(APIstub shim.ChaincodeStubInterface) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.Invoke">func (s *SmartContract) Invoke(APIstub shim.ChaincodeStubInterface) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.changeComponent">func (s *SmartContract) changeComponent(APIstub shim.ChaincodeStubInterface, args []string) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.changeComponentToDiffAsset">func (s *SmartContract) changeComponentToDiffAsset(APIstub shim.ChaincodeStubInterface, args []string) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.exportData">func (s *SmartContract) exportData(APIstub shim.ChaincodeStubInterface) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.initLedger">func (s *SmartContract) initLedger(APIstub shim.ChaincodeStubInterface) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.queryAllAssets">func (s *SmartContract) queryAllAssets(APIstub shim.ChaincodeStubInterface) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.queryAllComps">func (s *SmartContract) queryAllComps(APIstub shim.ChaincodeStubInterface) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.queryAllHashes">func (s *SmartContract) queryAllHashes(APIstub shim.ChaincodeStubInterface) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.queryAllObs">func (s *SmartContract) queryAllObs(APIstub shim.ChaincodeStubInterface) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.queryObj">func (s *SmartContract) queryObj(APIstub shim.ChaincodeStubInterface, args []string) sc.Response</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.updateDateInService">func (s *SmartContract) updateDateInService(APIstub shim.ChaincodeStubInterface, args []string) sc.Response</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/fab_dingo/fab_dingo.go">fab_dingo.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls—perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants <a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#pkg-constants">¶</a></h2>
+			
+				<p>
+Define URL links to extract data from
+</p>
+
+				<pre>const (
+    <span id="ASSET_URL">ASSET_URL</span>        = "http://206.189.24.238/assets"
+    <span id="COMPONENTS_URL">COMPONENTS_URL</span>   = "http://206.189.24.238/components"
+    <span id="OBSERVATIONS_URL">OBSERVATIONS_URL</span> = "http://206.189.24.238/observations"
+    <span id="HASHES_URL">HASHES_URL</span>       = "http://206.189.24.238/hashes"
+    <span id="POST_HASHES_URL">POST_HASHES_URL</span>  = "http://fab-priv-srv.glitch.me/hashes"
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="queryObjs">func <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=11348:11438#L331">queryObjs</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#queryObjs">¶</a>
+				
+				
+			</h2>
+			<pre>func queryObjs(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>, startKey <a href="http://localhost:6060/pkg/builtin/#string">string</a>, endKey <a href="http://localhost:6060/pkg/builtin/#string">string</a>) []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a></pre>
+			<p>
+Retrieves all JSON objects that are in the key range from the first argument to the second
+(inclusive) and returns a new JSON object with the Key field and a Record field of the objects
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Asset">type <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=526:915#L13">Asset</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#Asset">¶</a>
+				
+				
+			</h2>
+			<p>
+Define Asset object and fields
+</p>
+
+			<pre>type Asset struct {
+<span id="Asset.SerialNumber"></span>    SerialNumber           <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"SerialNumber"`
+<span id="Asset.OperatingEnvironmentID"></span>    OperatingEnvironmentID <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"OperatingEnvironmentID"`
+<span id="Asset.LocationID"></span>    LocationID             <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"LocationID"`
+<span id="Asset.AssetModelID"></span>    AssetModelID           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"AssetModelID"`
+<span id="Asset.AssetID"></span>    AssetID                <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"AssetID"`
+<span id="Asset.Asset"></span>    Asset                  <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"Asset"`
+<span id="Asset.DateInService"></span>    DateInService          <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"DateInService"`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="getLinkAssets">func <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=13112:13140#L403">getLinkAssets</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#getLinkAssets">¶</a>
+					
+					
+				</h3>
+				<pre>func getLinkAssets() []<a href="http://localhost:6060/pkg/fab_dingo/?m=all#Asset">Asset</a></pre>
+				<p>
+Retrieves all the Assets as JSON objects from the private Fabric Server API endpoint
+and returns an array of all Assets
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Assets">type <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=2955:2969#L83">Assets</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#Assets">¶</a>
+				
+				
+			</h2>
+			<p>
+Define the collection of all objects
+</p>
+
+			<pre>type Assets []<a href="http://localhost:6060/pkg/fab_dingo/?m=all#Asset">Asset</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Component">type <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=1121:1522#L30">Component</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#Component">¶</a>
+				
+				
+			</h2>
+			<p>
+Define Component object and fields
+</p>
+
+			<pre>type Component struct {
+<span id="Component.SerialNumber"></span>    SerialNumber       <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"SerialNumber"`
+<span id="Component.DefaultLabFormatID"></span>    DefaultLabFormatID <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"DefaultLabFormatID"`
+<span id="Component.ComponentName"></span>    ComponentName      <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"ComponentName"`
+<span id="Component.ComponentModelID"></span>    ComponentModelID   <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ComponentModelID"`
+<span id="Component.ComponentID"></span>    ComponentID        <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ComponentID"`
+<span id="Component.Component"></span>    Component          <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"Component"`
+<span id="Component.AssetID"></span>    AssetID            <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"AssetID"` <span class="comment">// Relates to AssetID in Asset</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="getLinkComponents">func <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=13729:13765#L433">getLinkComponents</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#getLinkComponents">¶</a>
+					
+					
+				</h3>
+				<pre>func getLinkComponents() []<a href="http://localhost:6060/pkg/fab_dingo/?m=all#Component">Component</a></pre>
+				<p>
+Retrieves all the Components as JSON objects from the private Fabric Server API endpoint
+and returns an array of all Components
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Components">type <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=2971:2993#L84">Components</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#Components">¶</a>
+				
+				
+			</h2>
+			<p>
+Define the collection of all objects
+</p>
+
+			<pre>type Components []<a href="http://localhost:6060/pkg/fab_dingo/?m=all#Component">Component</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Hash">type <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=2653:2785#L69">Hash</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#Hash">¶</a>
+				
+				
+			</h2>
+			<p>
+Define Hash object and fields
+</p>
+
+			<pre>type Hash struct {
+<span id="Hash.ReadyHashID"></span>    ReadyHashID <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ReadyHashID"`
+<span id="Hash.AssetID"></span>    AssetID     <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"AssetID"`
+<span id="Hash.Hash"></span>    Hash        <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"Hash"`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="HashFab">type <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=2840:2905#L76">HashFab</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#HashFab">¶</a>
+				
+				
+			</h2>
+			<p>
+Define Hash object from the ledger and its fields
+</p>
+
+			<pre>type HashFab struct {
+<span id="HashFab.Key"></span>    Key    <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"Key"`
+<span id="HashFab.Record"></span>    Record *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#Hash">Hash</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Hashes">type <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=3023:3036#L86">Hashes</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#Hashes">¶</a>
+				
+				
+			</h2>
+			<p>
+Define the collection of all objects
+</p>
+
+			<pre>type Hashes []<a href="http://localhost:6060/pkg/fab_dingo/?m=all#Hash">Hash</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="getLinkHashes">func <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=12510:12537#L374">getLinkHashes</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#getLinkHashes">¶</a>
+					
+					
+				</h3>
+				<pre>func getLinkHashes() <a href="http://localhost:6060/pkg/fab_dingo/?m=all#Hashes">Hashes</a></pre>
+				<p>
+Retrieves all the 'ReadyHashes' as JSON objects from the private Fabric Server API endpoint
+and returns an array of all Hashes
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Observation">type <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=1745:2431#L47">Observation</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#Observation">¶</a>
+				
+				
+			</h2>
+			<p>
+Define Observation object and fields
+</p>
+
+			<pre>type Observation struct {
+<span id="Observation.UpdateUserID"></span>    UpdateUserID           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"UpdateUserID"`
+<span id="Observation.SiteID"></span>    SiteID                 <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"SiteID"`
+<span id="Observation.MeterEventID"></span>    MeterEventID           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"MeterEventID"`
+<span id="Observation.DataSourceID"></span>    DataSourceID           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"DataSourceID"`
+<span id="Observation.TrakkaExceptionLevelID"></span>    TrakkaExceptionLevelID <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"TrakkaExceptionLevelID"`
+<span id="Observation.ObservationExceptionID"></span>    ObservationExceptionID <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ObservationExceptionID"`
+<span id="Observation.ImportID"></span>    ImportID               <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ImportID"`
+<span id="Observation.ObservationCode"></span>    ObservationCode        <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:"ObservationCode"`
+<span id="Observation.MeterReading"></span>    MeterReading           <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"MeterReading"`
+<span id="Observation.ConnectionCodeID"></span>    ConnectionCodeID       <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ConnectionCodeID"`
+<span id="Observation.ObservationTypeID"></span>    ObservationTypeID      <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ObservationTypeID"`
+<span id="Observation.ObservationID"></span>    ObservationID          <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:"ObservationID"`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="getLinkObservations">func <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=14366:14406#L462">getLinkObservations</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#getLinkObservations">¶</a>
+					
+					
+				</h3>
+				<pre>func getLinkObservations() []<a href="http://localhost:6060/pkg/fab_dingo/?m=all#Observation">Observation</a></pre>
+				<p>
+Retrieves all the Observations as JSON objects from the private Fabric Server API endpoint
+and returns an array of all Observations
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Observations">type <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=2995:3021#L85">Observations</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#Observations">¶</a>
+				
+				
+			</h2>
+			<p>
+Define the collection of all objects
+</p>
+
+			<pre>type Observations []<a href="http://localhost:6060/pkg/fab_dingo/?m=all#Observation">Observation</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SmartContract">type <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=3077:3104#L90">SmartContract</a>
+				<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">¶</a>
+				
+				
+			</h2>
+			<p>
+Define the Smart Contract for API
+</p>
+
+			<pre>type SmartContract struct{}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SmartContract.Init">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=3633:3710#L103">Init</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.Init">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) Init(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+The Init method is called when the Smart Contract "fab-dingo" is instantiated by the blockchain network
+Best practice is to have any Ledger initialization in separate function -- see initLedger()
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.Invoke">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=4010:4089#L109">Invoke</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.Invoke">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) Invoke(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+The Invoke method is called as a result of an application request to run the Smart Contract "fab-dingo"
+The calling application program has also specified the particular smart contract function to be called, with arguments
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.changeComponent">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=7256:7359#L210">changeComponent</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.changeComponent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) changeComponent(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>, args []<a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+Updates the Component's component product with the argmuent provided
+To be used when a new component is put into the Asset (swapped out)
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.changeComponentToDiffAsset">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=7886:8000#L230">changeComponentToDiffAsset</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.changeComponentToDiffAsset">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) changeComponentToDiffAsset(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>, args []<a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+Updates the Component's component product to another already existing Asset
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.exportData">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=15024:15107#L491">exportData</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.exportData">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) exportData(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+POSTs data to the private Fabric Server for the client side to pull from and complete the hash comparison
+Currently only posts hashes in fabric structure
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.initLedger">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=5252:5335#L141">initLedger</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.initLedger">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) initLedger(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+Initiates the ledger with all retrieved Assets, Components, Observations and Hashes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.queryAllAssets">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=9298:9385#L277">queryAllAssets</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.queryAllAssets">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) queryAllAssets(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+Retrieves all Assets from in their current state and displays them to the console in
+JSON format
+</p>
+<p>
+If no Assets can be found at all, then an error will be thrown and prompted with a message
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.queryAllComps">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=9829:9915#L291">queryAllComps</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.queryAllComps">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) queryAllComps(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+Gets all Components provided by the private Server endpoint from Components prior and
+displays them to the console in JSON format
+</p>
+<p>
+If no Components can be found at all, then an error will be thrown and prompted with a message
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.queryAllHashes">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=10870:10957#L319">queryAllHashes</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.queryAllHashes">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) queryAllHashes(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+Gets all hashes provided by the private Server endpoint from Assets prior and
+displays them to the console in JSON format
+</p>
+<p>
+If no Hashes can be found at all, then an error will be thrown and prompted with a message
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.queryAllObs">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=10361:10445#L305">queryAllObs</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.queryAllObs">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) queryAllObs(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+Gets all Observations provided by the private Server endpoint from Observations prior and
+displays them to the console in JSON format
+</p>
+<p>
+If no Observations can be found at all, then an error will be thrown and prompted with a message
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.queryObj">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=8716:8812#L257">queryObj</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.queryObj">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) queryObj(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>, args []<a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+Gets the single [Asset, Component, Observation, Hash] with the inputted argument and returns
+it in a single JSON object
+</p>
+<p>
+If no object can be found, it will return an error with the following message
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SmartContract.updateDateInService">func (*SmartContract) <a href="http://localhost:6060/src/fab_dingo/fab_dingo.go?s=6583:6690#L189">updateDateInService</a>
+					<a class="permalink" href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract.updateDateInService">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="http://localhost:6060/pkg/fab_dingo/?m=all#SmartContract">SmartContract</a>) updateDateInService(APIstub <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/">shim</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/core/chaincode/shim/#ChaincodeStubInterface">ChaincodeStubInterface</a>, args []<a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/">sc</a>.<a href="http://localhost:6060/pkg/github.com/hyperledger/fabric/protos/peer/#Response">Response</a></pre>
+				<p>
+Updates an Asset's "DateInService" field with the argument given
+Should be used when an Asset has been serviced and needs to be updated
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.11.1.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:6060/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+
+</body></html>
